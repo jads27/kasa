@@ -1,0 +1,15 @@
+$color1: #FF6060;
+
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: "Montserrat";
+}
+
+header, main {
+    margin: auto 340px;
+}
