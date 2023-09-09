@@ -1,0 +1,33 @@
+main {
+.home-banner {
+    @include centerChild;
+    height: 223px;
+    border-radius: 25px;
+    background-image: url("../../assets/img/image-source-1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+
+    p {
+        font-size: 48px;
+        color: $color2;
+        z-index: 0;
+    }
+}
+
+.about-banner {
+    @include centerChild;
+    height: 223px;
+    border-radius: 25px;
+    background-image: url("../../assets/img/image-source-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+
+    p {
+        display: none;
+    }
+}
+}

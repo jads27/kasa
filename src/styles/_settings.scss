@@ -1,4 +1,7 @@
 $color1: #FF6060;
+$color2: #FFFFFF;
+$color3: #F6F6F6;
+$color4: #000000;
 
 @mixin centerChild {
     display: flex;
@@ -8,8 +11,13 @@ $color1: #FF6060;
 
 body {
     font-family: "Montserrat";
+    margin: 0;
 }
 
 header, main {
     margin: auto 340px;
+}
+
+p {
+    margin: 0;
 }

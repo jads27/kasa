@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-const Navigation = () => {
+const Header = () => {
     return (
         <header>
             <nav>
@@ -13,7 +13,7 @@ const Navigation = () => {
                         <li>Accueil</li>
                     </NavLink>
                     <NavLink to="/about" className={(nav) => (nav.isActive ? "nav-active" : "")}>
-                        <li>A Propos</li>
+                        <li>À Propos</li>
                     </NavLink>
                 </ul>
             </nav>
@@ -21,4 +21,4 @@ const Navigation = () => {
     );
 };
 
-export default Navigation;
+export default Header;

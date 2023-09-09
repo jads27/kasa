@@ -1,10 +1,16 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
+import React from "react";
+import Header from "../components/Header";
+import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 
 const About = () => {
     return (
         <div>
-            <Navigation />
+            <Header />
+            <main>
+                <Banner isHome={false} />
+            </main>
+            <Footer />
         </div>
     );
 };
