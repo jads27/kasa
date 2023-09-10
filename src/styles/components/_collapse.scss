@@ -1,0 +1,49 @@
+.about-main {
+    min-height: 58vh;
+
+    .collapse {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto 108.5px;
+        margin-bottom: 30px;
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 52px;
+            text-align: start;
+            background-color: $color1;
+            border: initial;
+            border-radius: 5px;
+            color: $color2;
+            font-size: 24px;
+
+            span {
+                margin: auto 15px;
+            }
+
+            button {
+                margin-right: 24px;
+                height: 30px;
+                background: inherit;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            height: 104px;
+            background-color: $color3;
+            font-size: 18px;
+            color: $color1;
+
+            p {
+                margin: auto 20px;
+            }
+        }
+    }
+}
