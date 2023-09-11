@@ -1,8 +1,7 @@
-main {
+
     .cards {
         display: flex;
         flex-wrap: wrap;
-        margin-top: 43px;
         border-radius: 25px;
         background: $color3;
         padding: 50px;
@@ -44,4 +43,4 @@ main {
             }
         }
     }
-}
+
