@@ -1,0 +1,19 @@
+.error {
+    @include centerChild;
+    flex-direction: column;
+    gap: 139px;
+    color: $color1;
+
+    p:first-of-type {
+        font-size: 288px;
+    }
+
+    p:last-of-type {
+        font-size: 36px;
+    }
+
+    a {
+        text-decoration: underline;
+        margin-bottom: 89px;
+    }
+}
