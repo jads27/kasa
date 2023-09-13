@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 const Cards = () => {
     const [data, setData] = useState([]);
@@ -11,9 +12,11 @@ const Cards = () => {
     return (
         <div className="cards">
             {data.map((cards) => (
-                <figure key={cards.id} style={{backgroundImage: `url(${cards.cover})`}}>
-                    <p>{cards.title}</p>
-                </figure>
+                <div key={cards.id}style={{backgroundImage: `url(${cards.cover})`}}>
+                    <Link  to={`${cards.id}`}>
+                    <span>{cards.title}</span>
+                    </Link>
+                </div>
             ))}
         </div>
     );
