@@ -1,0 +1,31 @@
+.carousel {
+    display: flex;
+    height: 415px;
+    position: relative;
+    margin-bottom: 25px;
+    
+    button {
+        background: none;
+        border: none;
+        padding: 0;
+        top: 1fr;
+        top: calc(50% - 40px);
+            /* Centrez le premier élément verticalement en soustrayant la moitié de sa hauteur (40px) */
+        
+        &.left-arrow {
+            position: absolute;
+            margin-left: 24px;
+        }
+        &.right-arrow {
+            position: absolute;
+            right: 0;
+            margin-right: 24px;
+        }
+    }
+    .current-slide {
+        width: 100%;
+        max-width: 1223px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+}
