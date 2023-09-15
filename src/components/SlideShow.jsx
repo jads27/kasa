@@ -19,13 +19,22 @@ const SlideShow = ({image, alt}) => {
 
     return (
         <div className="carousel">
-            <button className="left-arrow" onClick={previousSlide}>
-                <img  src={LeftArrowIcon} alt="Précédent" />
-            </button>
             <img className="current-slide" src={image[currentSlideIndex]} alt={alt} />
-            <button className="right-arrow" onClick={nextSlide}>
-                <img  src={RightArrowIcon} alt="Suivant" />
-            </button>
+            {image.length > 1 ? (
+                <React.StrictMode>
+                    <button className="left-arrow" onClick={previousSlide}>
+                        <img src={LeftArrowIcon} alt="Précédent" />
+                    </button>
+                    <button className="right-arrow" onClick={nextSlide}>
+                        <img src={RightArrowIcon} alt="Suivant" />
+                    </button>
+                    <p>
+                        {currentSlideIndex + 1}/{image.length}
+                    </p>
+                </React.StrictMode>
+            ) : (
+                ""
+            )}
         </div>
     );
 };
