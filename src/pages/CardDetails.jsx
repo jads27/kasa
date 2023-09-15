@@ -1,37 +1,43 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import axios from "axios";
-import Header from "./Header";
-import Footer from "./Footer";
-import SlideShow from "./SlideShow";
-import Collapse from "./Collapse";
-import Rating from "./Rating";
-import Error from "./Error"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import SlideShow from "../components/SlideShow";
+import Collapse from "../components/Collapse";
+import Rating from "../components/Rating";
 
 const CardDetails = () => {
     const {id} = useParams();
     const [cardData, setCardData] = useState({});
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("logements.json")
-        .then((res) => {
-            const data = res.data;
-            const card = data.find((card) => card.id === id);
-            card ? setCardData(card) : "";
-            setLoading(false)
-        })
-        .catch ((error) => {
-            console.error("Error fetching JSON data", error)
-        })
+        axios
+            .get("/logements.json")
+            .then((res) => {
+                const data = res.data;
+                const card = data.find((card) => card.id === id);
+                !card ? navigate("/404") : "  ";
+                card ? setCardData(card) : setError(true);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching JSON data", error);
+                navigate("/404");
+                setError(true);
+                setLoading(false);
+            });
     }, [id]);
 
     return (
         <div>
-            <Header />
-            <main className="card-details">
-                {!loading ? (
-                    <React.StrictMode>
+            {!loading && !error ? (
+                <React.StrictMode>
+                    <Header />
+                    <main className="card-details">
                         <SlideShow image={cardData.pictures} alt={cardData.title} />
                         <div className="content-wrapper-1">
                             <div className="title-content">
@@ -52,7 +58,7 @@ const CardDetails = () => {
                                     <span key={index}>{tag}</span>
                                 ))}
                             </div>
-                            <Rating rating={parseFloat(cardData.rating)}/>
+                            <Rating rating={parseFloat(cardData.rating)} />
                         </div>
                         <div className="content-wrapper-3">
                             <Collapse title="Description" content={cardData.description} />
@@ -63,10 +69,12 @@ const CardDetails = () => {
                                 ))}
                             />
                         </div>
-                    </React.StrictMode>
-                ) : <Error />}
-            </main>
-            <Footer />
+                    </main>
+                    <Footer />
+                </React.StrictMode>
+            ) : (
+                ""
+            )}
         </div>
     );
 };

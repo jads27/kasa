@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Error from "./pages/Error";
-import CardDetails from "./components/CardDetails";
+import CardDetails from "./pages/CardDetails";
 
 function App() {
     return (
