@@ -12,11 +12,11 @@
         top: calc(50% - 40px);
             /* Centrez le premier élément verticalement en soustrayant la moitié de sa hauteur (40px) */
         
-        &.left-arrow {
+        &.arrow-left {
             position: absolute;
             margin-left: 24px;
         }
-        &.right-arrow {
+        &.arrow-right {
             position: absolute;
             right: 0;
             margin-right: 24px;

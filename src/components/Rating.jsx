@@ -1,6 +1,6 @@
 import React from "react";
-import RedStarIcon from "../assets/icons/red-star.svg";
-import GreyStarIcon from "../assets/icons/grey-star.svg";
+import RedStarIcon from "../assets/icons/star-red.svg";
+import GreyStarIcon from "../assets/icons/star-grey.svg";
 
 const Rating = ({rating}) => {
     const maxRating = 5;

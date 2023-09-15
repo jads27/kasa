@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import LeftArrowIcon from "../assets/icons/left-arrow.svg";
-import RightArrowIcon from "../assets/icons/right-arrow.svg";
+import LeftArrowIcon from "../assets/icons/arrow-left.svg";
+import RightArrowIcon from "../assets/icons/arrow-right.svg";
 
 const SlideShow = ({image, alt}) => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -22,10 +22,10 @@ const SlideShow = ({image, alt}) => {
             <img className="current-slide" src={image[currentSlideIndex]} alt={alt} />
             {image.length > 1 ? (
                 <React.StrictMode>
-                    <button className="left-arrow" onClick={previousSlide}>
+                    <button className="arrow-left" onClick={previousSlide}>
                         <img src={LeftArrowIcon} alt="Précédent" />
                     </button>
-                    <button className="right-arrow" onClick={nextSlide}>
+                    <button className="arrow-right" onClick={nextSlide}>
                         <img src={RightArrowIcon} alt="Suivant" />
                     </button>
                     <p>
