@@ -6,7 +6,7 @@ const Header = () => {
         <header>
             <nav>
                 <NavLink to="/">
-                    <img src="logo.png" alt="Logo Kasa" />
+                    <img src="/logo.png" alt="Logo Kasa" />
                 </NavLink>
                 <ul>
                     <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
