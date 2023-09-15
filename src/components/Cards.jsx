@@ -13,7 +13,7 @@ const Cards = () => {
         <div className="cards">
             {data.map((cards) => (
                 <div key={cards.id}style={{backgroundImage: `url(${cards.cover})`}}>
-                    <Link  to={`${cards.id}`}>
+                    <Link  to={`/housing/${cards.id}`}>
                     <span>{cards.title}</span>
                     </Link>
                 </div>
