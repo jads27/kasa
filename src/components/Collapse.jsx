@@ -12,14 +12,12 @@ const Collapse = ({title, content}) => {
     return (
         <div className="collapse">
             <div className="title">
-                {isOpen ? true : false} <span>{title}</span>
+                <span>{title}</span>
                 <button onClick={toggleCollapse}>{isOpen ? <img src={DropdownIconOpen} alt="Fermer" /> : <img src={DropdownIcon} alt="Ouvrir" />}</button>
             </div>
-            {isOpen && (
-                <div className="content">
-                    <p>{content}</p>
-                </div>
-            )}
+            <div className={`content ${isOpen ? "open" : "closed"}`}>
+                <p>{content}</p>
+            </div>
         </div>
     );
 };
