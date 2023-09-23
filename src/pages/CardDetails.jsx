@@ -57,7 +57,7 @@ const CardDetails = () => {
                                         <span>{cardData.host.name.split(" ")[0]}</span>
                                         <span>{cardData.host.name.split(" ")[1]}</span>
                                     </div>
-                                    <img src={cardData.host.picture} />
+                                    <img src={cardData.host.picture} alt="Photo du locataire" />
                                 </div>
                                 <Rating rating={parseFloat(cardData.rating)} />
                             </div>

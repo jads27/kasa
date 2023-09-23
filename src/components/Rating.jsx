@@ -11,13 +11,13 @@ const Rating = ({rating}) => {
     return (
         <div className="rating">
             {redStars.map((_, index) => (
-                <img key={index} src={RedStarIcon}  />
+                <img key={index} src={RedStarIcon} alt="*" />
             ))}
             {greyStars.map((_, index) => (
-                <img key={index + rating} src={GreyStarIcon} />
+                <img key={index + rating} src={GreyStarIcon} alt=" " />
             ))}
         </div>
-    )
+    );
 };
 
 export default Rating;

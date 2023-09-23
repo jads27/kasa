@@ -98,9 +98,9 @@
             .rating {
                 gap: 9.25px;
                 @media (max-width: 789px) {
-                   img {
-                    width: 20px;
-                   }
+                    img {
+                        width: 20px;
+                    }
                 }
             }
         }
@@ -108,8 +108,8 @@
 
     .content-container-3 {
         margin-top: 24px;
-             
-        @media (max-width:  789px) {
+
+        @media (max-width: 789px) {
             flex-direction: column;
             gap: 20px;
         }
