@@ -1,9 +1,12 @@
 import React from "react";
 
-const Banner = ( {isHome} ) => {
+const Banner = ({isHome}) => {
     return (
-        <div className={isHome ? "home-banner" : "about-banner"}>
-            <p>Chez vous, partout et ailleurs</p>
+        <div className={`banner ${isHome ? "is-home" : "is-about"}`}>
+            <p>
+                <span>Chez vous, </span>
+                <span>partout et ailleurs</span>
+            </p>
         </div>
     );
 };

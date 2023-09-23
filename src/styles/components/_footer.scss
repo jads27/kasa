@@ -3,12 +3,28 @@ footer {
     text-align: center;
     background: $color4;
     height: 209px;
+    
+    @media (max-width: 375px) {
+        margin-top: 27px;
+    }
+
     img {
         margin-top: 66px;
         margin-bottom: 35px;
-    }
 
+        @media (max-width: 375px) {
+            margin-bottom: 12px;
+        }
+    }
     p {
         color: $color2;
+
+        @media (max-width: 375px) {
+            font-size: 12px;
+
+            span {
+                display: block;
+            }
+        }
     }
 }

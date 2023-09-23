@@ -1,27 +1,41 @@
-.home-banner {
+.banner {
     @include centerChild;
     height: 223px;
     margin-bottom: 43px;
     border-radius: 25px;
-    background: url("../../assets/images/image-source-1.jpg") rgba(0, 0, 0, 0.3) center no-repeat;
     background-blend-mode: darken;
 
-    p {
-        font-size: 48px;
-        color: $color2;
-        z-index: 0;
+    @media (max-width: 375px) {
+        height: 111px;
+        margin-bottom: 22px;
     }
-}
 
-.about-banner {
-    @include centerChild;
-    height: 223px;
-    margin-bottom: 43px;
-    border-radius: 25px;
-    background: url("../../assets/images/image-source-2.jpg") rgba(0, 0, 0, 0.3) center no-repeat;
-    background-blend-mode: darken;
+    &.is-home {
+        background: url("../../assets/images/image-source-1.jpg") rgba(0, 0, 0, 0.3) center/cover no-repeat;
 
-    p {
-        display: none;
+        p {
+            margin: 32px 16px;
+            font-size: 48px;
+            color: $color2;
+            z-index: 0;
+            @media (max-width: 789px) {
+                font-size: 34px;
+            }
+            @media (max-width: 375px) {
+                font-size: 24px;
+                
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &.is-about {
+        background: url("../../assets/images/image-source-2.jpg") rgba(0, 0, 0, 0.3) center/cover no-repeat;
+
+        p {
+            display: none;
+        }
     }
 }

@@ -10,12 +10,21 @@ $color4: #000000;
 }
 
 body {
+    min-width: 330px;
     font-family: "Montserrat";
     margin: 0;
 }
 
 header, main {
     margin: auto 340px;
+
+    @media (max-width: 1440px) {
+        margin: auto 40px;
+    }
+
+    @media (max-width: 375px) {
+        margin: auto 20px;
+    }
 }
 
 button {

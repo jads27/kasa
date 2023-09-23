@@ -8,6 +8,14 @@
         padding-right: 0px;
         gap: 50px;
 
+        @media (max-width: 375px) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            gap: 20px;
+            background-color: initial;
+        }
+
         div {
             display: flex;
             flex: 0 0 calc(33.3% - 50px);
@@ -19,6 +27,15 @@
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
+
+            @media (max-width: 789px) {
+                    height: 255px;
+                    flex: 0 calc(100% - 50px);
+            }
+            @media (max-width: 375px) {
+                flex: none;
+                height: 255px;
+            }
 
             &::before {
                     content: "";

@@ -1,66 +1,127 @@
 .card-details {
     color: $color1;
+
     div {
         display: flex;
         justify-content: space-between;
-
-        h1 {
-            font-size: 36px;
-            font-weight: 500;
-        }
     }
-    .content-wrapper-1 {
-        align-items: center;
-        margin-bottom: 20px;
-
-        .title-content {
+    @media (max-width: 789px) {
+        font-size: 14px;
+    }
+    .content-wrapper {
+        @media (max-width: 789px) {
             flex-direction: column;
+            gap: 24px;
         }
-        .host-content {
+        .content-container-1 {
             align-items: center;
 
-            div {
-                display: flex;
+            .title-content {
                 flex-direction: column;
-                align-items: end;
-                margin-right: 10px;
+
+                h1 {
+                    font-size: 36px;
+                    font-weight: 500;
+
+                    @media (max-width: 789px) {
+                        font-size: 24px;
+                        margin-bottom: 5px;
+                    }
+                    @media (max-width: 375px) {
+                        font-size: 18px;
+                    }
+                }
+                p {
+                    margin-bottom: 20px;
+
+                    @media (max-width: 375px) {
+                        font-size: 14px;
+                    }
+                }
             }
-            img {
-                height: 68px;
-                border-radius: 100%;
+
+            .tag-content {
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: initial;
+                gap: 10px;
+                color: $color2;
+
+                span {
+                    padding: 3px 30px;
+                    text-align: center;
+                    background-color: $color1;
+                    width: auto;
+                    border-radius: 10px;
+                    white-space: nowrap;
+
+                    @media (max-width: 375px) {
+                        font-size: 10px;
+                    }
+                }
             }
         }
-    }
 
-    .content-wrapper-2 {
-        align-items: center;
-        .tag-content {
+        .content-container-2 {
             align-items: center;
-            gap: 10px;
-            color: $color2;
-
-            span {
-                padding: 3px 30px;
-                text-align: center;
-                background-color: $color1;
-                width: auto;
-                border-radius: 10px;
+            flex-direction: column;
+            @media (max-width: 789px) {
+                justify-content: space-between;
+                flex-direction: row-reverse;
             }
-        }
-        .rating {
-            gap: 9.25px;
+            @media (max-width: 375px) {
+                justify-content: space-between;
+                flex-direction: row-reverse;
+            }
+
+            .host-content {
+                align-items: center;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                    margin-right: 10px;
+
+                    @media (max-width: 375px) {
+                        font-size: 12px;
+                    }
+                }
+                img {
+                    height: 68px;
+                    border-radius: 100%;
+
+                    @media (max-width: 375px) {
+                        height: 32px;
+                    }
+                }
+            }
+            .rating {
+                gap: 9.25px;
+                @media (max-width: 789px) {
+                   img {
+                    width: 20px;
+                   }
+                }
+            }
         }
     }
 
-    .content-wrapper-3 {
+    .content-container-3 {
         margin-top: 24px;
-        gap: 76px;
+             
+        @media (max-width:  789px) {
+            flex-direction: column;
+            gap: 20px;
+        }
 
         .collapse {
             margin: 0;
-            width: 100%;
+            min-width: 202.5px;
+            width: 45%;
             height: 100%;
-
+            @media (max-width: 789px) {
+                width: 100%;
+            }
             .content {
                 p {
                     display: flex;

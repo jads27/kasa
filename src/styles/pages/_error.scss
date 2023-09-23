@@ -4,16 +4,41 @@
     gap: 139px;
     color: $color1;
 
+    @media (max-width: 789px) {
+        gap: 113px;
+    }
+
     p:first-of-type {
         font-size: 288px;
+
+        @media (max-width: 789px) {
+            font-size: 148px;
+        }
+        @media (max-width: 375px) {
+            font-size: 96px;
+            margin-top: 68px;
+        }
     }
 
     p:last-of-type {
         font-size: 36px;
+        text-align: center;
+
+        @media (max-width: 789px) {
+            font-size: 24px;
+        }
+        @media (max-width: 375px) {
+            text-align: center;
+            font-size: 18px;
+        }
     }
 
     a {
         text-decoration: underline;
         margin-bottom: 89px;
+
+        @media (max-width: 375px) {
+            font-size: 14px;
+        }
     }
 }
