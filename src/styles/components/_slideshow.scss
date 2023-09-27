@@ -57,7 +57,7 @@
         transform: translateX(-50%);
         text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 
-        @media (max-width: 375px) {
+        @media (max-width: 789px) {
             display: none;
         }
     }
