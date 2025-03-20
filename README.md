@@ -6,6 +6,6 @@ With over 500 listings posted every day, Kasa is one of the leading platforms fo
 
 ![Kasa](public/logo.png)
 
-![Kasa](images/kasa-page.gif)
+![Kasa](public/kasa-page.gif)
 
 This fictional project was carried out as part of my OpenClassrooms training, where I was responsible for developing the React application, including components and React Router routes, while following responsive Figma mockups and all the provided information.
